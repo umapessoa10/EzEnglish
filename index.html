@@ -10,7 +10,7 @@
         .dropbtn {
             background-color: #04AA6D;
             color: white;
-            padding: 16px;
+            height: 200%;
             font-size: 16px;
             border: none;
         }
@@ -67,16 +67,23 @@
         .exercise-inner-container {
             background-color: blue;
             display: flex;
-            justify-content: content;
-            align-content: center;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
 
         .exercise {
             background-color: green;
             padding: 5px;
-            margin: 15px;
-            width: 20%;
+            margin: 15px; /* Adjusted the margin for spacing between items */
+            width: calc(25% - 10px); /* Adjusted the width for four items in a row */
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .exercise img {
+            width: 95%;
+            height: auto;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -104,18 +111,37 @@
         <h3>Present Simple</h3>
         <p>Description here</p>
         <div class="exercise-inner-container">
+            <div class="exercise" onclick="redirectTo('exercises/simple-present')">
+                <center><img src="images/placeholder.webp"></center><br>
+                <span>Title of exercise</span><br>
+                <span>Little description</span>
+            </div>
+        
+            <div class="exercise">
+                <center><img src="images/placeholder.webp"></center><br>
+                <span>Title of exercise</span><br>
+                <span>Little description</span>
+            </div>
+
+            <div class="exercise">
+                <center><img src="images/placeholder.webp"></center><br>
+                <span>Title of exercise</span><br>
+                <span>Little description</span>
+            </div>
             <div class="exercise">
                 <center><img src="images/placeholder.webp"></center><br>
                 <span>Title of exercise</span><br>
                 <span>Little description</span>
             </div>
         
-        
-        
+        </div>
     </div>
 </body>
 <script>
     // You can add your JavaScript code here if needed.
+    function redirectTo(url) {
+        windw.url = url;
+    }
 </script>
 </html>
 
